@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TELFORD Safety Observation Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h2 {
+      background: #002e5d;
+      color: white;
+      padding: 05px;
+    }
+    .section {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      background: white;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    td, th {
+      padding: 5px;
+      vertical-align: top;
+    }
+    label {
+      display: block;
+    }
+    .logo {
+      width: 350px; height:350px;
+    }
+
+    input[type="text"], input[type="date"], input[type="time"] {
+      width: 100%;
+    }
+  </style>
+ <script>
+    function toggleExclusive(name, type) {
+      const plus = document.querySelector(`input[name="${name}-plus"]`);
+      const minus = document.querySelector(`input[name="${name}-minus"]`);
+      if (type === 'plus' && plus.checked) minus.checked = false;
+      if (type === 'minus' && minus.checked) plus.checked = false;
+    }
+  </script>
+
+</head>
+<body>
+
+ <img src="C:\Users\Lenovo.DESKTOP-O9BCH1C\Desktop\TOL_share_logo.jpg" alt="Telford Offshore Logo" class="logo">
+
+  <h2> SAFETY OBSERVATION CARD <br>
+        CBMS-TOL-HSE-FRM-023  </h2>
+  <div class="subheader">(for official use only) CARD NO:</div>
+
+
+  <div class="section">
+    <h3>1. Details of Safety Observation</h3>
+    <label>Name (Observer): <input type="  " name="observer_name"></label><br><br>
+    <label>Place: <input type=" " name="place"></label><br><br>
+    <label>Worksite: <input type=" " name="worksite"></label><br><br>
+    <label>Date: <input type="date" name="date"></label>
+    <label>Time: <input type="time" name="time"></label>
+
+    <p><strong>Person Involved:</strong></p>
+    <label><input type="checkbox"> TOL</label>
+    <label><input type="checkbox"> Client</label>
+    <label><input type="checkbox"> Catering/TOL</label>
+    <label><input type="checkbox"> Contractor</label>
+
+    <p><strong>Category:</strong></p>
+    <label><input type="checkbox"> Observation</label>
+    <label><input type="checkbox"> Improvement Opportunity</label>
+  </div>
+
+  <div class="section">
+    <h3>2. Observation</h3>
+    <h4>Behavioural Factors:</h4>
+    <table border="1">
+      <tr>
+        <th>Factor</th><th>+</th><th>-</th>
+        <th>Factor</th><th>+</th><th>-</th>
+      </tr>
+      <tr>
+        <td>Personnel position</td><td><input type="checkbox" name="bf1-plus" onclick="toggleExclusive('bf1','plus')"></td>
+        <td><input type="checkbox" name="bf1-minus" onclick="toggleExclusive('bf1','minus')"></td>
+
+
+        <td>Use of safety devices</td><td><input type="checkbox" name="bf2-plus" onclick="toggleExclusive('bf2','plus')"></td>
+        <td><input type="checkbox" name="bf2-minus" onclick="toggleExclusive('bf2','minus')"></td>
+      </tr>
+      <tr>
+        <td>Use of PPE</td> <td><input type="checkbox" name="bf3-plus" onclick="toggleExclusive('bf3','plus')"></td>
+        <td><input type="checkbox" name="bf3-minus" onclick="toggleExclusive('bf3','minus')"></td>
+
+        <td>Attention / awareness</td> <td><input type="checkbox" name="bf4-plus" onclick="toggleExclusive('bf4','plus')"></td>
+        <td><input type="checkbox" name="bf4-minus" onclick="toggleExclusive('bf4','minus')"></td>
+
+      </tr>
+      <tr>
+        <td>Communication</td> <td><input type="checkbox" name="bf5-plus" onclick="toggleExclusive('bf5','plus')"></td>
+        <td><input type="checkbox" name="bf5-minus" onclick="toggleExclusive('bf5','minus')"></td>
+
+        <td>Use of tools</td> <td><input type="checkbox" name="bf6-plus" onclick="toggleExclusive('bf6','plus')"></td>
+        <td><input type="checkbox" name="bf6-minus" onclick="toggleExclusive('bf6','minus')"></td>
+
+      </tr>
+      <tr>
+        <td>Task planning / time</td> <td><input type="checkbox" name="bf7-plus" onclick="toggleExclusive('bf7','plus')"></td>
+        <td><input type="checkbox" name="bf7-minus" onclick="toggleExclusive('bf7','minus')"></td>
+
+        <td>Task knowledge</td> <td><input type="checkbox" name="bf8-plus" onclick="toggleExclusive('bf8','plus')"></td>
+        <td><input type="checkbox" name="bf8-minus" onclick="toggleExclusive('bf8','minus')"></td>
+
+      </tr>
+      <tr>
+        <td>Task supervision</td> <td><input type="checkbox" name="bf9-plus" onclick="toggleExclusive('bf9','plus')"></td>
+        <td><input type="checkbox" name="bf9-minus" onclick="toggleExclusive('bf9','minus')"></td>
+
+        <td>Following procedures</td> <td><input type="checkbox" name="bf10-plus" onclick="toggleExclusive('bf10','plus')"></td>
+        <td><input type="checkbox" name="bf10-minus" onclick="toggleExclusive('bf10','minus')"></td>
+
+      </tr>
+      <tr>
+        <td>Use of PTW</td> <td><input type="checkbox" name="bf11-plus" onclick="toggleExclusive('bf11','plus')"></td>
+        <td><input type="checkbox" name="bf11-minus" onclick="toggleExclusive('bf11','minus')"></td>
+
+        <td>Motivation</td> <td><input type="checkbox" name="bf12-plus" onclick="toggleExclusive('bf12','plus')"></td>
+        <td><input type="checkbox" name="bf12-minus" onclick="toggleExclusive('bf12','minus')"></td>
+
+      </tr>
+      <tr>
+        <td>Use of work equipment</td> <td><input type="checkbox" name="bf13-plus" onclick="toggleExclusive('bf13','plus')"></td>
+        <td><input type="checkbox" name="bf13-minus" onclick="toggleExclusive('bf13','minus')"></td>
+
+        <td>Personal conduct</td> <td><input type="checkbox" name="bf14-plus" onclick="toggleExclusive('bf14','plus')"></td>
+        <td><input type="checkbox" name="bf14-minus" onclick="toggleExclusive('bf14','minus')"></td>
+
+      </tr>
+      <tr>
+        <td>Implementation of identified controls</td> <td><input type="checkbox" name="bf15-plus" onclick="toggleExclusive('bf15','plus')"></td>
+        <td><input type="checkbox" name="bf15-minus" onclick="toggleExclusive('bf15','minus')"></td>
+
+        <td>Compliance with identified controls</td> <td><input type="checkbox" name="bf16-plus" onclick="toggleExclusive('bf16','plus')"></td>
+        <td><input type="checkbox" name="bf16-minus" onclick="toggleExclusive('bf16','minus')"></td>
+
+      </tr>
+    </table>
+
+    <h4>Conditional Factors:</h4>
+    <table border="1">
+      <tr>
+        <th>Factor</th><th>+</th><th>-</th>
+        <th>Factor</th><th>+</th><th>-</th>
+      </tr>
+      <tr>
+        <td>Housekeeping</td> <td><input type="checkbox" name="cf1-plus" onclick="toggleExclusive('cf1','plus')"></td>
+        <td><input type="checkbox" name="cf1-minus" onclick="toggleExclusive('cf1','minus')"></td>
+
+        <td>Lighting</td><td><input type="checkbox" name="cf2-plus" onclick="toggleExclusive('cf2','plus')"></td>
+        <td><input type="checkbox" name="cf2-minus" onclick="toggleExclusive('cf2','minus')"></td>
+      </tr>
+      <tr>
+        <td>Storage</td><td><input type="checkbox" name="cf3-plus" onclick="toggleExclusive('cf3','plus')"></td>
+        <td><input type="checkbox" name="cf3-minus" onclick="toggleExclusive('cf3','minus')"></td>
+
+        <td>Access / Egress</td><td><input type="checkbox" name="cf4-plus" onclick="toggleExclusive('cf4','plus')"></td>
+        <td><input type="checkbox" name="cf4-minus" onclick="toggleExclusive('cf4','minus')"></td>
+      </tr>
+      <tr>
+        <td>Guards / Barriers</td><td><input type="checkbox" name="cf5-plus" onclick="toggleExclusive('cf5','plus')"></td>
+        <td><input type="checkbox" name="cf5-minus" onclick="toggleExclusive('cf5','minus')"></td>
+
+        <td>Surface condition</td><td><input type="checkbox" name="cf6-plus" onclick="toggleExclusive('cf6','plus')"></td>
+        <td><input type="checkbox" name="cf6-minus" onclick="toggleExclusive('cf6','minus')"></td>
+      </tr>
+      <tr>
+        <td>Weather / Climate</td><td><input type="checkbox" name="cf7-plus" onclick="toggleExclusive('cf7','plus')"></td>
+        <td><input type="checkbox" name="cf7-minus" onclick="toggleExclusive('cf7','minus')"></td>
+
+        <td>Tools or equipment</td><td><input type="checkbox" name="cf8-plus" onclick="toggleExclusive('cf8','plus')"></td>
+        <td><input type="checkbox" name="cf8-minus" onclick="toggleExclusive('cf8','minus')"></td>
+      </tr>
+      <tr>
+        <td>Fatigue</td><td><input type="checkbox" name="cf9-plus" onclick="toggleExclusive('cf9','plus')"></td>
+        <td><input type="checkbox" name="cf9-minus" onclick="toggleExclusive('cf9','minus')"></td>
+
+        <td>PPE</td><td><input type="checkbox" name="cf10-plus" onclick="toggleExclusive('cf10','plus')"></td>
+        <td><input type="checkbox" name="cf10-minus" onclick="toggleExclusive('cf10','minus')"></td>
+      </tr>
+      <tr>
+        <td>Work environment</td><td><input type="checkbox" name="cf11-plus" onclick="toggleExclusive('cf11','plus')"></td>
+        <td><input type="checkbox" name="cf11-minus" onclick="toggleExclusive('cf11','minus')"></td>
+
+        <td>Task Communication</td><td><input type="checkbox" name="cf12-plus" onclick="toggleExclusive('cf12','plus')"></td>
+        <td><input type="checkbox" name="cf12-minus" onclick="toggleExclusive('cf12','minus')"></td>
+      </tr>
+      <tr>
+        <td>Obstructions</td><td><input type="checkbox" name="cf13-plus" onclick="toggleExclusive('cf13','plus')"></td>
+        <td><input type="checkbox" name="cf13-minus" onclick="toggleExclusive('cf13','minus')"></td>
+
+        <td>Supervision</td><td><input type="checkbox" name="cf14-plus" onclick="toggleExclusive('cf14','plus')"></td>
+        <td><input type="checkbox" name="cf14-minus" onclick="toggleExclusive('cf14','minus')"></td>
+      </tr>
+      <tr>
+        <td>Isolation</td><td><input type="checkbox" name="cf15-plus" onclick="toggleExclusive('cf15','plus')"></td>
+        <td><input type="checkbox" name="cf15-minus" onclick="toggleExclusive('cf15','minus')"></td>
+
+        <td>Noise or vibration</td><td><input type="checkbox" name="cf16-plus" onclick="toggleExclusive('cf16','plus')"></td>
+        <td><input type="checkbox" name="cf16-minus" onclick="toggleExclusive('cf16','minus')"></td>
+      </tr>
+      <tr>
+        <td>Time allocated for task</td><td><input type="checkbox" name="cf17-plus" onclick="toggleExclusive('cf17','plus')"></td>
+        <td><input type="checkbox" name="cf17-minus" onclick="toggleExclusive('cf17','minus')"></td>
+
+        <td>Competence / Training</td><td><input type="checkbox" name="cf18-plus" onclick="toggleExclusive('cf18','plus')"></td>
+        <td><input type="checkbox" name="cf18-minus" onclick="toggleExclusive('cf18','minus')"></td>
+      </tr>
+    </table>
+  </div>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Safety Observation Card - Page 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    .section {
+      border: 1px solid #ccc;
+      padding: 15px;
+      background: white;
+      margin-bottom: 20px;
+    }
+    h3 {
+      background-color: #002e5d;
+      color: white;
+      padding: 10px;
+      margin: 0 -15px 10px -15px;
+    }
+    textarea {
+      width: 100%;
+      height: 120px;
+      margin-top: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      border: 1px solid #ccc;
+      vertical-align: top;
+    }
+    label {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h3>3. Description of Observation (include any action(s) taken)</h3>
+    <textarea name="observation_description"></textarea>
+  </div>
+
+  <div class="section">
+    <h3>4. Review by Shipboard Management <span style="float:right;">Tick if review N/A <input type="checkbox"></span></h3>
+    
+    <table>
+      <tr>
+        <th colspan="2">Action Required:</th>
+        <th colspan="2">Dept Responsible for Action:</th>
+      </tr>
+      <tr>
+        <td><input type="checkbox"> Incident Report Form</td>
+        <td><input type="checkbox"> Corrective Action Request</td>
+        <td><input type="checkbox"> Deck</td>
+        <td><input type="checkbox"> Engine</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"> Management of Change</td>
+        <td><input type="checkbox"> Document Change Form</td>
+        <td><input type="checkbox"> Safety</td>
+        <td><input type="checkbox"> Catering</td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>Card Record & Closure:</strong></td>
+        <td><input type="checkbox"> Client</td>
+        <td><input type="checkbox"> Medic</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"> Data input into record</td>
+        <td><input type="checkbox"> Card closed by SSO</td>
+        <td><input type="checkbox"> Office</td>
+        <td><input type="checkbox"> Other</td>
+      </tr>
+    </table>
+
+    <p><strong>Master's Signature</strong> (only if reviewed by Shipboard Management):</p>
+        <textarea name="observation_description"></textarea>
+
+    
+    <p><strong>Date:</strong> 01<sup>st</sup> January 2018 &nbsp;&nbsp;&nbsp;&nbsp; <strong>Rev No:</strong> 0</p>
+  </div>
+
+
+
+</body>
+</html>
